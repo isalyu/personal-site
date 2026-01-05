@@ -1,0 +1,52 @@
+{
+  "id": "restaurant-review-prediction",
+  "status": "Running",
+  "ready": "1/1",
+  "restarts": 0,
+  "startedAt": "2025-04-20T00:00:00Z",
+  "logs": [
+    {
+      "type": "text",
+      "tag": "INFO",
+      "message": "developed models to predict user star ratings for restaurants"
+    },
+
+    { "type": "spacer" },
+
+    {
+      "type": "text",
+      "tag": "DATA",
+      "message": "yelp open dataset -> philadelphia restaurants only"
+    },
+    {
+      "type": "text",
+      "tag": "WORK",
+      "message": "data analysis + scoping for feasibility"
+    },
+    {
+      "type": "text",
+      "tag": "FEAT",
+      "message": "one-hot attributes/categories + user filtering"
+    },
+    { "type": "text", "tag": "IMPL", "message": "nn: keras sequential model" },
+    {
+      "type": "text",
+      "tag": "RESULT",
+      "message": "xgboost outperformed linear (OLR)/nn baselines"
+    },
+    {
+      "type": "text",
+      "tag": "LEARN",
+      "message": "class imbalance (majority data 4★) drove most failure cases"
+    },
+
+    { "type": "spacer" },
+
+    {
+      "type": "link",
+      "tag": "LINK",
+      "message": "recognized with best undergraduate project award in CS 4641",
+      "url": "https://mahdi-roozbahani.github.io/CS46417641-spring2025/docs/grading/project-breakdown/award_galore/"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "about",
+    "label": "about",
+    "podIds": ["whoami"]
+  },
+  {
+    "id": "projects",
+    "label": "projects",
+    "podIds": ["restaurant-review-prediction"]
+  }
+]

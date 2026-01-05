@@ -1,0 +1,42 @@
+{
+  "id": "whoami",
+  "status": "Running",
+  "ready": "1/1",
+  "restarts": 0,
+  "startedAt": "2003-09-25T00:00:00Z",
+  "logs": [
+    { "type": "text", "tag": "LOC", "message": "us-east (atlanta)" },
+    { "type": "spacer" },
+    { "type": "text", "tag": "BUILD", "message": "georgia-tech" },
+    {
+      "type": "text",
+      "tag": "BUILD",
+      "message": "bs: mathematics / minor: computing & intelligence"
+    },
+    { "type": "spacer" },
+    {
+      "type": "text",
+      "tag": "AREA",
+      "message": "data platforms & distributed systems"
+    },
+    {
+      "type": "text",
+      "tag": "AREA",
+      "message": "production llm-backed pipelines"
+    },
+    { "type": "text", "tag": "AREA", "message": "end-user product features" },
+    { "type": "spacer" },
+    {
+      "type": "link",
+      "tag": "LINK",
+      "message": "github",
+      "url": "https://github.com/isalyu"
+    },
+    {
+      "type": "link",
+      "tag": "LINK",
+      "message": "digital bookshelf",
+      "url": "https://curius.app/isa-lyubimova"
+    }
+  ]
+}
