@@ -35,7 +35,9 @@ export function ClusterPage() {
         <>
           <span className="frame-title-cyan">Pods(</span>
           <span className="frame-title-magenta">all</span>
-          <span className="frame-title-cyan">)[{rows.length}]</span>
+          <span className="frame-title-cyan">)[</span>
+          <span className="frame-title-neutral">{rows.length}</span>
+          <span className="frame-title-cyan">]</span>
         </>
       }
     >

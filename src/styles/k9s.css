@@ -120,6 +120,10 @@ a:hover {
   color: var(--magenta);
   font-weight: 700;
 }
+.frame-title-neutral {
+  color: var(--text);
+  font-weight: 700;
+}
 
 .frame-actions {
   position: absolute;

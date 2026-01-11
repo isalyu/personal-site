@@ -33,9 +33,11 @@ export function LogsPage() {
     <Frame
       title={
         <>
+          <span className="frame-title-text">Logs(</span>
           <span className="frame-title-cyan">
-            Logs {namespaceId}/{pod.id}
+            {namespaceId}/{pod.id}
           </span>
+          <span className="frame-title-text">)</span>
         </>
       }
       actions={
