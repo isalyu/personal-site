@@ -5,11 +5,11 @@ import { LogsPage } from "./pages/LogsPage";
 
 export default function App() {
   return (
-    <AppLayout>
-      <Routes>
+    <Routes>
+      <Route element={<AppLayout />}>
         <Route path="/" element={<ClusterPage />} />
         <Route path="/ns/:namespace/pod/:podId/logs" element={<LogsPage />} />
-      </Routes>
-    </AppLayout>
+      </Route>
+    </Routes>
   );
 }

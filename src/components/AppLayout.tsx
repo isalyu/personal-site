@@ -1,11 +1,23 @@
-import React from "react";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import { TopBar } from "./TopBar";
 
-export function AppLayout(props: { children: React.ReactNode }) {
+export type AppLayoutContext = {
+  activeNamespace: string | null;
+  setActiveNamespace: (ns: string | null) => void;
+};
+
+export function AppLayout() {
+  const [activeNamespace, setActiveNamespace] = useState<string | null>(null);
+
   return (
     <div className="container">
       <TopBar />
-      {props.children}
+      <Outlet
+        context={
+          { activeNamespace, setActiveNamespace } satisfies AppLayoutContext
+        }
+      />
     </div>
   );
 }

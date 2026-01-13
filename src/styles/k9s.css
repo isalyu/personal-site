@@ -1,10 +1,13 @@
 :root {
   --bg: #000000;
+  --white: #ffffff;
   --text: #d6dde7;
   --muted: #b0b0b0;
   --orange: #ff9d00;
   --cyan: #00ffff;
+  --blue: #3d9adb;
   --magenta: #ff00ff;
+  --dark-magenta: #aa00aa;
   --muted-cyan: #7dbdbd;
   --select: #1c2a3a;
   --warn: #ffcc66;
@@ -56,6 +59,32 @@ a:hover {
   font-weight: 700;
 }
 
+.topbar-center {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.topbar-hint-display {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 10px;
+  row-gap: 6px;
+  line-height: 1.2;
+}
+.namespaces .label {
+  color: var(--dark-magenta);
+  font-weight: 600;
+}
+.shortcuts .label {
+  color: var(--blue);
+  font-weight: 600;
+}
+.topbar-hint-display .value {
+  color: var(--muted);
+  font-weight: 500;
+}
+
 .metadata {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -65,7 +94,7 @@ a:hover {
 }
 
 .metadata .label {
-  color: var(--text);
+  color: var(--white);
   font-weight: 500;
 }
 
@@ -121,7 +150,7 @@ a:hover {
   font-weight: 700;
 }
 .frame-title-neutral {
-  color: var(--text);
+  color: var(--white);
   font-weight: 700;
 }
 
@@ -141,7 +170,7 @@ a:hover {
 .table thead th {
   text-align: left;
   padding: 10px 12px;
-  color: var(--muted);
+  color: var(--white);
   border-bottom: none;
   font-weight: 600;
 }

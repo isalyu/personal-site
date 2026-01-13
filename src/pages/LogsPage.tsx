@@ -1,13 +1,26 @@
-import { useMemo } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useMemo } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { siteData } from "../data/site";
 import { Frame } from "../components/Frame";
 import { formatTag } from "../utils/renderLogLine";
 
 export function LogsPage() {
+  const navigate = useNavigate();
   const params = useParams();
   const namespaceId = params.namespace ?? "";
   const podId = params.podId ?? "";
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape" || e.key === "q" || e.key === "Q") {
+        e.preventDefault();
+        navigate("/");
+      }
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [navigate]);
 
   const pod = useMemo(() => {
     const ns = siteData.namespaces.find((n) => n.id === namespaceId);
@@ -33,11 +46,11 @@ export function LogsPage() {
     <Frame
       title={
         <>
-          <span className="frame-title-text">Logs(</span>
+          <span className="frame-title-neutral">Logs(</span>
           <span className="frame-title-cyan">
             {namespaceId}/{pod.id}
           </span>
-          <span className="frame-title-text">)</span>
+          <span className="frame-title-neutral">)</span>
         </>
       }
       actions={

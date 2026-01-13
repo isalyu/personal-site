@@ -18,6 +18,32 @@ export function TopBar() {
           <span className="value">{siteData.environment.version}</span>
         </div>
       </div>
+
+      <div className="topbar-center">
+        <div className="topbar-hint-display namespaces">
+          <span className="label">{"<0>"}</span>
+          <span className="value">all</span>
+
+          {siteData.namespaces.map((ns, i) => (
+            <>
+              <span key={`${ns.id}-k`} className="label"> {`<${i + 1}>`} </span>
+              <span key={`${ns.id}-v`} className="value"> {ns.label ?? ns.id} </span>
+            </>
+          ))}
+        </div>
+
+        <div className="topbar-hint-display shortcuts">
+          <span className="label">{"<↑/↓>"}</span>
+          <span className="value">Nav</span>
+
+          <span className="label">{"<l>"}</span>
+          <span className="value">Logs</span>
+
+          <span className="label">{"<esc>"}</span>
+          <span className="value">Back</span>
+        </div>
+      </div>
+
       <div className="brand">
         <pre className="brand-ascii-art">{String.raw`
         .___  _________   _____

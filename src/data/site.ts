@@ -15,7 +15,7 @@ export const siteData: SiteData = {
     cluster: "local",
     context: "public",
     user: "guest",
-    version: "v1.0.0",
+    version: "v1.1.0",
   },
   namespaces: (
     namespacesDef as Array<{

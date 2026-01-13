@@ -25,6 +25,9 @@ export default [
         window: "readonly",
         document: "readonly",
         console: "readonly",
+        HTMLElement: "readonly",
+        EventTarget: "readonly",
+        KeyboardEvent: "readonly",
       },
     },
     plugins: {
